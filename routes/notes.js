@@ -11,7 +11,12 @@ module.exports = (Note) =>{
     router.get("/", authenticateToken, async(req, res)=>{
         
         try{
-            const notes = await Note.find({"owner": req.user.name})
+            const notes = await Note.find({
+                $or: [
+                    { "owner": req.user.name }, // Notes owned by the user
+                    { "sharedWith": { $in: [req.user.name] } } // Notes shared with the user
+                ]
+            });
             res.json(notes)
         }catch(err){
             res.status(500).json({message: err.message})
