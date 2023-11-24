@@ -6,8 +6,8 @@ API Endpoints:
 
 Auth:
 
-POST /auth/signup: create a new user account /n
-POST /auth/login: login to an existing account and receive an access token
+POST /auth/signup: create a new user account  
+POST /auth/login: login to an existing account and receive an access token  
 
 Notes:
 
