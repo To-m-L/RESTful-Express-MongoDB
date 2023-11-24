@@ -1,0 +1,76 @@
+GET http://localhost:3000/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+
+####
+
+GET http://localhost:3000/auth/users
+
+####
+
+GET http://localhost:3000/notes/655fe72773f7e6af1d6ffe37
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+
+####
+
+POST http://localhost:3000/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+
+{
+    "content": "dce1234567"
+}
+
+###
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "name": "bob",
+    "password": "pass123"
+
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "name":"bob",
+    "password": "pass123"
+}
+
+###
+
+PUT http://localhost:3000/notes/655faf5ef4b203fb4c91ce48
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+Content-Type: application/json
+
+{
+
+    "content":"dce564"
+
+}
+
+###
+
+DELETE http://localhost:3000/notes/655faf5ef4b203fb4c91ce48
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+
+###
+
+GET http://localhost:3000/notes/search?keyword=abc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+
+###
+
+POST http://localhost:3000/notes/655faf5ef4b203fb4c91ce48/share
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9iIiwicGFzc3dvcmQiOiIkMmIkMTAkT2hXZmxka3U0L2E4UkxsY2YwWkUzdTlRS29oZVVMeGVGMUl5VkZCRG0zZWQxZUEwMEN4LnUiLCJpYXQiOjE3MDA3NjkwMDR9.FS1TYC_ctEXMwBXUl0vJT8cz4PSgkvqD6IHGacWPvbw
+Content-Type: application/json
+
+{
+
+ "sharedUser": "kevin"
+
+}
