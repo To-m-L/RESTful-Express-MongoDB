@@ -1,6 +1,6 @@
 # RESTful-Express-MongoDB
 
-A RESTful API made utilizing Node.js, Express, and MongoDB that allows the user to create, read, update, and delete notes.
+A RESTful API made utilizing Node.js, Express, and MongoDB that allows the user to create, read, update, and delete notes. Authentication built with bcrypt and jsonwebtokens.
 
 API Endpoints:
 
